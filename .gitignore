@@ -29,4 +29,5 @@ Thumbs.db
 *.log
 
 # Model files (if too large for git)
-# model/ 
+model/model.safetensors
+model/*.safetensors 
