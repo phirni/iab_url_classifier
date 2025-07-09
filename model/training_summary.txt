@@ -1,0 +1,80 @@
+
+    =========================================================
+    ENHANCED MULTI-LABEL TEXT CLASSIFICATION TRAINING REPORT
+    =========================================================
+
+    Training completed at: 2025-07-08T13:52:49.030916
+
+    DATASET SUMMARY:
+    - Total samples: 4,526
+    - Unique labels: 32
+    - Average labels per sample: 2.49
+    - Average text length: 5106 characters
+
+    CLASS IMBALANCE ANALYSIS:
+    - Most frequent label frequency: 0.2561
+    - Least frequent label frequency: 0.0110
+    - Imbalance ratio: 23.18:1
+    - Labels with <1% frequency: 0
+    - Labels with <5% frequency: 14
+
+    MODEL CONFIGURATION:
+    - Base model: DistilBERT (distilbert-base-uncased)
+    - Number of output labels: 32
+    - Weighted loss: YES (class imbalance handling)
+    - Threshold optimization: YES
+
+    TRAINING CONFIGURATION:
+    - Learning rate: 2e-05
+    - Epochs: 7
+    - Batch size: 16
+    - Training time: 519.76 seconds
+    - Total training steps: 495
+    - Early stopping: True
+
+    PERFORMANCE RESULTS (STANDARD 0.5 THRESHOLD):
+    - Exact match accuracy: 0.0850
+    - Any match accuracy: 0.9746
+    - Hamming loss: 0.1274
+    - Jaccard score: 0.4431
+    - F1-macro: 0.5240
+    - F1-micro: 0.5219
+    - Precision-macro: 0.3997
+    - Recall-macro: 0.8926
+
+    PERFORMANCE RESULTS (OPTIMIZED THRESHOLDS):
+    - Exact match accuracy: 0.2936
+    - Any match accuracy: 0.9084
+    - Hamming loss: 0.0649
+    - Jaccard score: 0.5748
+    - F1-macro: 0.6853
+    - F1-micro: 0.6434
+    - Precision-macro: 0.6981
+    - Recall-macro: 0.7465
+
+    IMPROVEMENT WITH THRESHOLD OPTIMIZATION:
+    - Exact match accuracy: 0.2086
+    - Any match accuracy: -0.0662
+    - F1-macro: 0.1613
+    - F1-micro: 0.1216
+
+    TOP 5 MOST IMBALANCED LABELS:
+    
+    TOP 5 MOST COMMON LABELS:
+        1. 'Entertainment' - Count: 1159, Frequency: 0.2561
+    2. 'Events' - Count: 908, Frequency: 0.2006
+    3. 'Technology & Computing' - Count: 768, Frequency: 0.1697
+    4. 'Hobbies & Interests' - Count: 652, Frequency: 0.1441
+    5. 'Family And Relationships' - Count: 625, Frequency: 0.1381
+
+    TRAINING RECOMMENDATION:
+        ✓ EXCELLENT: Model performs very well on multi-label classification
+    ✓ THRESHOLD OPTIMIZATION EFFECTIVE: Significant improvement achieved
+
+    FILES GENERATED:
+    - Model: ./enhanced_multilabel_model_20250708_134330/
+    - Training report: ./enhanced_multilabel_model_20250708_134330/enhanced_training_report.json
+    - Visualizations: enhanced_dataset_analysis.png, label_imbalance_analysis.png
+
+    =========================================================
+    

@@ -1,0 +1,341 @@
+{
+  "timestamp": "2025-07-08T13:52:49.030916",
+  "model_info": {
+    "model_name": "distilbert-base-uncased",
+    "num_labels": 32,
+    "label_names": [
+      "Attractions",
+      "Automotive",
+      "Books And Literature",
+      "Business And Finance",
+      "Careers",
+      "Education",
+      "Entertainment",
+      "Events",
+      "Family And Relationships",
+      "Fine Art",
+      "Food & Drink",
+      "Healthy Living",
+      "Hobbies & Interests",
+      "Holidays",
+      "Home & Garden",
+      "Law",
+      "Medical Health",
+      "Personal Celebrations & Life Events",
+      "Personal Finance",
+      "Pets",
+      "Politics",
+      "Pop Culture",
+      "Real Estate",
+      "Religion & Spirituality",
+      "Science",
+      "Shopping",
+      "Sports",
+      "Style & Fashion",
+      "Technology & Computing",
+      "Travel",
+      "Video Gaming",
+      "Weather"
+    ],
+    "class_imbalance_handling": true,
+    "weighted_loss": true,
+    "threshold_optimization": true
+  },
+  "dataset_analysis": {
+    "dataset_stats": {
+      "total_samples": 4526,
+      "unique_urls": 4012,
+      "duplicate_urls": 514
+    },
+    "label_analysis": {
+      "unique_labels_count": 32,
+      "total_label_instances": 11268,
+      "avg_labels_per_sample": 2.4896155545735748,
+      "most_common_labels": [
+        [
+          "Entertainment",
+          1159
+        ],
+        [
+          "Events",
+          908
+        ],
+        [
+          "Technology & Computing",
+          768
+        ],
+        [
+          "Hobbies & Interests",
+          652
+        ],
+        [
+          "Family And Relationships",
+          625
+        ],
+        [
+          "Education",
+          593
+        ],
+        [
+          "Healthy Living",
+          567
+        ],
+        [
+          "Attractions",
+          514
+        ],
+        [
+          "Medical Health",
+          501
+        ],
+        [
+          "Sports",
+          429
+        ]
+      ],
+      "least_common_labels": [
+        [
+          "Science",
+          159
+        ],
+        [
+          "Weather",
+          153
+        ],
+        [
+          "Law",
+          144
+        ],
+        [
+          "Real Estate",
+          125
+        ],
+        [
+          "Personal Celebrations & Life Events",
+          90
+        ],
+        [
+          "Style & Fashion",
+          84
+        ],
+        [
+          "Religion & Spirituality",
+          76
+        ],
+        [
+          "Automotive",
+          75
+        ],
+        [
+          "Holidays",
+          54
+        ],
+        [
+          "Pets",
+          50
+        ]
+      ],
+      "label_frequencies": {
+        "Entertainment": 0.25607600530269553,
+        "Events": 0.20061864781263808,
+        "Technology & Computing": 0.16968625718073355,
+        "Hobbies & Interests": 0.14405656208572692,
+        "Family And Relationships": 0.13809102960671674,
+        "Education": 0.13102076889085285,
+        "Healthy Living": 0.12527618205921343,
+        "Attractions": 0.11356606274856386,
+        "Medical Health": 0.11069376933274415,
+        "Sports": 0.09478568272205037,
+        "Pop Culture": 0.09213433495360142,
+        "Travel": 0.08506407423773751,
+        "Business And Finance": 0.08241272646928856,
+        "Shopping": 0.0793194874060981,
+        "Careers": 0.07092355280600972,
+        "Food & Drink": 0.06473707467962882,
+        "Video Gaming": 0.06407423773751657,
+        "Politics": 0.06208572691117985,
+        "Personal Finance": 0.04882898806893504,
+        "Fine Art": 0.04838709677419355,
+        "Books And Literature": 0.04706142288996907,
+        "Home & Garden": 0.037560760053026956,
+        "Science": 0.03513035793194874,
+        "Weather": 0.03380468404772426,
+        "Law": 0.031816173221387536,
+        "Real Estate": 0.02761820592134335,
+        "Personal Celebrations & Life Events": 0.019885108263367212,
+        "Style & Fashion": 0.01855943437914273,
+        "Religion & Spirituality": 0.016791869200176758,
+        "Automotive": 0.01657092355280601,
+        "Holidays": 0.011931064958020326,
+        "Pets": 0.01104728236853734
+      },
+      "positive_weights": {
+        "Healthy Living": 6.982363315696649,
+        "Medical Health": 8.033932135728543,
+        "Sports": 9.55011655011655,
+        "Food & Drink": 14.447098976109215,
+        "Video Gaming": 14.606896551724137,
+        "Entertainment": 2.9050905953408113,
+        "Events": 3.984581497797357,
+        "Pop Culture": 9.853717026378897,
+        "Automotive": 59.346666666666664,
+        "Hobbies & Interests": 5.941717791411043,
+        "Home & Garden": 25.623529411764707,
+        "Real Estate": 35.208,
+        "Family And Relationships": 6.2416,
+        "Travel": 10.755844155844155,
+        "Shopping": 11.607242339832869,
+        "Attractions": 7.80544747081712,
+        "Fine Art": 19.666666666666668,
+        "Personal Finance": 19.479638009049772,
+        "Weather": 28.58169934640523,
+        "Careers": 13.09968847352025,
+        "Law": 30.430555555555557,
+        "Politics": 15.1067615658363,
+        "Personal Celebrations & Life Events": 49.28888888888889,
+        "Technology & Computing": 4.893229166666667,
+        "Business And Finance": 11.134048257372655,
+        "Science": 27.465408805031448,
+        "Style & Fashion": 52.88095238095238,
+        "Religion & Spirituality": 58.55263157894737,
+        "Education": 6.632377740303541,
+        "Pets": 89.52,
+        "Holidays": 82.81481481481481,
+        "Books And Literature": 20.248826291079812
+      },
+      "labels_per_sample_stats": {
+        "mean": 2.4896155545735748,
+        "median": 3.0,
+        "max": 5,
+        "min": 1
+      }
+    },
+    "text_analysis": {
+      "avg_text_length": 5106.437251436147,
+      "median_text_length": 3066.5,
+      "max_text_length": 49881,
+      "min_text_length": 3,
+      "avg_word_count": 845.3506407423773,
+      "median_word_count": 516.0
+    },
+    "imbalance_analysis": {
+      "min_frequency": 0.01104728236853734,
+      "max_frequency": 0.25607600530269553,
+      "frequency_std": 0.05803898127679166,
+      "imbalance_ratio": 23.18,
+      "labels_below_1_percent": 0,
+      "labels_below_5_percent": 14,
+      "highly_imbalanced_labels": []
+    }
+  },
+  "training_info": {
+    "learning_rate": 2e-05,
+    "epochs": 7,
+    "batch_size": 16,
+    "total_train_steps": 495,
+    "training_time": 519.7598,
+    "positive_weights": [
+      7.676712328767123,
+      57.648148148148145,
+      20.113333333333333,
+      11.37109375,
+      13.730232558139535,
+      6.46933962264151,
+      3.0292620865139948,
+      4.026984126984127,
+      6.022172949002218,
+      19.171974522292995,
+      13.395454545454545,
+      6.762254901960785,
+      5.6533613445378155,
+      78.175,
+      24.747967479674795,
+      31.989583333333332,
+      7.871148459383753,
+      53.60344827586207,
+      19.044303797468356,
+      92.1470588235294,
+      14.756218905472636,
+      9.699324324324325,
+      35.40229885057471,
+      57.648148148148145,
+      30.67,
+      11.77016129032258,
+      10.112280701754386,
+      50.91803278688525,
+      4.843173431734317,
+      10.996212121212121,
+      15.24102564102564,
+      28.324074074074073
+    ],
+    "early_stopping": true
+  },
+  "performance_metrics": {
+    "standard_threshold_results": {
+      "eval_loss": 0.7041631937026978,
+      "eval_exact_match_accuracy": 0.08498896247240618,
+      "eval_hamming_loss": 0.1274144591611479,
+      "eval_jaccard_score": 0.44311512929062596,
+      "eval_f1_macro": 0.5239978588992364,
+      "eval_f1_micro": 0.5218741910432306,
+      "eval_precision_macro": 0.39974271624394814,
+      "eval_precision_micro": 0.36741388737014763,
+      "eval_recall_macro": 0.8925825736313575,
+      "eval_recall_micro": 0.9004019651630192,
+      "eval_any_match_accuracy": 0.9746136865342163,
+      "eval_avg_label_overlap": 0.9048013245033113,
+      "eval_accuracy": 0.9746136865342163,
+      "eval_runtime": 11.7549,
+      "eval_samples_per_second": 77.074,
+      "eval_steps_per_second": 2.467,
+      "epoch": 5.0
+    },
+    "optimized_threshold_results": {
+      "exact_match_accuracy": 0.293598233995585,
+      "any_match_accuracy": 0.9083885209713024,
+      "hamming_loss": 0.06491445916114791,
+      "jaccard_score": 0.5748134132240093,
+      "f1_macro": 0.6853292735277337,
+      "f1_micro": 0.643425539977264,
+      "precision_macro": 0.6980900137390869,
+      "precision_micro": 0.558736426456071,
+      "recall_macro": 0.7464894904072346,
+      "recall_micro": 0.7583742742295668
+    },
+    "optimal_thresholds": [
+      0.6000000000000002,
+      0.7500000000000002,
+      0.8000000000000002,
+      0.6000000000000002,
+      0.6000000000000002,
+      0.7500000000000002,
+      0.5500000000000002,
+      0.5500000000000002,
+      0.6000000000000002,
+      0.6500000000000001,
+      0.7500000000000002,
+      0.7500000000000002,
+      0.6500000000000001,
+      0.7500000000000002,
+      0.5500000000000002,
+      0.7500000000000002,
+      0.8000000000000002,
+      0.3500000000000001,
+      0.8000000000000002,
+      0.7000000000000002,
+      0.7500000000000002,
+      0.7500000000000002,
+      0.8500000000000002,
+      0.6500000000000001,
+      0.7500000000000002,
+      0.6500000000000001,
+      0.7500000000000002,
+      0.8500000000000002,
+      0.6000000000000002,
+      0.6000000000000002,
+      0.7500000000000002,
+      0.5000000000000001
+    ],
+    "training_loss": 0.8128581653941761
+  }
+}
